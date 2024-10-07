@@ -7,6 +7,8 @@ def pop_n_times(res):
         return
     
     for i in range(1, K + 1):
-        pop_n_times(res + [i])
+        res.append(i)
+        pop_n_times(res)
+        res.pop()
 
 pop_n_times([])
